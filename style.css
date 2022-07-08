@@ -146,7 +146,7 @@ header{
 	grid-area: 1/1/2/2;
 }
 #myI img{
-	max-height: 20vh;
+	max-height: 42vh;
 	align-items: center;
 	grid-area: 1/2/2/2;
 }
@@ -209,7 +209,7 @@ footer{
 		border-right: 2px solid #e0d2c5;
 	}
 	#myI img{
-		max-height: 22vh;
+		min-height: 34vh;
 	}
 	#myC{
 		background-color: #647687;
