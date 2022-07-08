@@ -1,0 +1,267 @@
+/*************
+ * Author: Edona Zefi
+ * Date: 4th of July 2022
+ * Description: Personal Website CSS
+ * **********/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans&display=swap');
+
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --white-50: rgba(255,255,255,0.5);
+}
+
+/****  General  ****/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+body{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	scroll-behavior: smooth;
+	background-image: url("img/back.jpg");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-color: #e6e6e6;
+}
+h1,h3{
+	font-family: 'Courgette', cursive;
+	margin: 18px;
+}
+p{
+	padding: 2px;
+	margin: 8px;
+}
+
+li{
+	list-style-type: square;
+}
+
+/**** Components ****/
+
+/** Navigation **/
+.navbox {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+}	
+.navbox * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.navbox li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  overflow: hidden;
+}
+.navbox a {
+  padding: 0.3em 0;
+  color: #72818f;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.navbox a:before,
+.navbox a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.navbox a:before {
+  top: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: white;
+}
+.navbox a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+}
+.navbox li:hover a,
+.navbox .current a {
+  transform: translateY(-100%);
+}
+nav{
+	background-color: #e0d2c5;
+	min-height: 6vh;
+	margin: 0;
+}
+
+/** Header **/
+header{
+	max-height: 16vh;
+	margin: 0;
+}
+#img1h{
+	max-height: 30vh;
+	max-width: 100%;
+}
+/** Main **/
+#container{
+	background-image: url("img/back.jpg");
+	background-repeat: repeat;
+	background-size: cover;
+	background-color: #e6e6e6;
+	display: grid;
+	justify-content: 1fr;
+	align-items: auto auto auto auto;
+	margin: 0px;
+	padding: 0px;
+}
+/* Divs */
+#about{
+	background-color: #647687;
+}
+#myW{
+	background-color: none;
+}
+#myI{
+	background-color: #647687;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+}
+#myI div{
+	grid-area: 1/1/2/2;
+}
+#myI img{
+	max-height: 20vh;
+	align-items: center;
+	grid-area: 1/2/2/2;
+}
+#myC{
+	background-color: none;
+	min-height: 40vh;
+
+}
+#myC li{
+	list-style: none;
+	padding: 20px;
+}
+
+
+/** Footer **/
+footer{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #e0d2c5;
+   color: white;
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;
+   display: inline-block;
+}
+
+/***** Responsive adjustments *****/
+ 
+@media(min-width: 822px) {
+	header{
+	max-height: 22vh;
+	margin: 0;
+	}
+	#img1h{
+		max-height: 40vh;
+		max-width: 100%;
+	}
+	/** Main **/
+	#container{
+		display: grid;
+		grid-template-columns:1fr 1fr;
+		grid-template-rows: auto auto;
+		margin: 0px;
+		padding: 0px;
+	}
+	/* Divs */
+	#about{
+		background-color: #647687;
+		border-bottom: 2px solid #e0d2c5;
+		border-right: 2px solid #e0d2c5;
+	}
+	#myW{
+		background-color: #647687;
+		border-bottom: 2px solid #e0d2c5;
+	}
+	#myI{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		border-right: 2px solid #e0d2c5;
+	}
+	#myI img{
+		max-height: 22vh;
+	}
+	#myC{
+		background-color: #647687;
+	}
+}
+
+@media(min-width: 1200px) {
+	header{
+	max-height: 30vh;
+	margin: 0;
+	}
+	#img1h{
+		max-height: 30vh;
+		min-width: 100%;
+	}
+	/** Main **/
+	#container{
+		background-image: url("img/back.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #e6e6e6;
+		display: grid;
+		grid-template-columns:1fr 1fr;
+		grid-template-rows: auto auto auto auto;
+		margin: 0px;
+		padding: 0px;
+	}
+	/* Divs */
+	#about{
+		background-color: #647687;
+		min-height: 40vh;
+		border-top: 1px solid;
+	}
+	#myW{
+		grid-area: 2/2/3/3;
+		background-color: #647687;
+	}
+	#myI{
+		grid-area: 3/1/3/2;
+		background-color: #647687;
+		min-height: 40vh;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+	}
+	#myI img{
+		max-height: 40vh;
+	}
+	#myC{
+		grid-area: 4/2/5/2;
+		background-color: #647687;
+		min-height: 40vh;
+
+	}
+}
